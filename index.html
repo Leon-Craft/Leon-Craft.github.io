@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeonCraft | سرور ماینکرفت</title>
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Vazirmatn:wght@400;700;800&display=swap" rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="asstes/css/style.css">
+
+    <!-- js -->
+    <link rel="stylesheet" href="asstes/js/script.js">
+</head>
+<body>
+
+    <!-- هدر -->
+    <header>
+        <div class="logo-text">
+            <img src="https://cdn.imgurl.ir/uploads/y08770_IMG_20260721_015749_161.png" class="mc-icon" alt="Crafting Table">
+            LeonCraft
+        </div>
+        <nav id="mainNav">
+            <a href="#ranks">خرید رنک</a>
+            <a href="#info">امکانات و قوانین</a>
+            <a href="#faq">سوالات متداول</a>
+            <!-- دکمه تیکت در منو -->
+            <a onclick="openTicketModal()" class="nav-ticket">تیکت</a>
+            
+            <div id="authLinks" style="display:flex; gap:15px; align-items:center; flex-wrap:wrap;">
+                <a onclick="openLoginModal()" class="nav-login">ورود به حساب</a>
+                <a onclick="openRegisterModal()" class="nav-register">ساخت حساب</a>
+            </div>
+            <div id="userLinks" style="display:none; gap:15px; align-items:center; flex-wrap:wrap;">
+                <span id="greetingUser" style="color:#ffd700; font-weight:700;">خوش آمدید</span>
+                <a onclick="logoutUser()" style="color:#ff6b6b;">خروج از حساب</a>
+            </div>
+            <a href="minecraft://" style="color: #00d2ff;">ورود به سرور</a>
+        </nav>
+    </header>
+
+    <!-- بخش اصلی -->
+    <section class="hero">
+        <img src="logo.png" alt="LeonCraft Logo" class="logo-img">
+        <h1>
+            LeonCraft
+            <img src="https://cdn.imgurl.ir/uploads/i530399_IMG_20260721_015752_880.png" class="mc-icon" alt="Diamond">
+        </h1>
+        <div class="server-ip">
+            <img src="https://cdn.imgurl.ir/uploads/i530399_IMG_20260721_015752_880.png" class="mc-icon" alt="Diamond">
+            آیپی سرور: <span>play.leoncraft.ir</span>
+            <img src="https://cdn.imgurl.ir/uploads/i530399_IMG_20260721_015752_880.png" class="mc-icon" alt="Diamond">
+        </div>
+        <p>بهترین سرور ایرانی با بهترین قیمت های رنک و بهترین کیفیت!</p>
+        
+        <div id="heroButtons" class="hero-buttons">
+            <div id="guestActions" style="display:flex; gap:15px; flex-wrap:wrap; justify-content:center;">
+                <button onclick="document.getElementById('ranks').scrollIntoView({behavior:'smooth'})" class="btn-hero btn-primary-hero">
+                    <img src="https://cdn.imgurl.ir/uploads/i78143_IMG_20260721_015750_591.png" class="mc-icon mc-icon-small" alt="TNT">
+                    خرید رنک و آیتم‌ها
+                </button>
+                <button onclick="openLoginModal()" class="btn-hero btn-login-hero">ورود به حساب</button>
+                <button onclick="openRegisterModal()" class="btn-hero btn-register-hero">
+                    <img src="https://cdn.imgurl.ir/uploads/y08770_IMG_20260721_015749_161.png" class="mc-icon mc-icon-small" alt="Crafting Table">
+                    ساخت حساب
+                </button>
+                <a href="minecraft://" class="btn-hero btn-connect-hero">
+                    <img src="https://cdn.imgurl.ir/uploads/i78143_IMG_20260721_015750_591.png" class="mc-icon mc-icon-small" alt="TNT">
+                    ورود به سرور
+                </a>
+            </div>
+
+            <div id="loggedActions" style="display:none; gap:15px; flex-wrap:wrap; justify-content:center;">
+                <button onclick="document.getElementById('ranks').scrollIntoView({behavior:'smooth'})" class="btn-hero btn-primary-hero">
+                    <img src="https://cdn.imgurl.ir/uploads/i78143_IMG_20260721_015750_591.png" class="mc-icon mc-icon-small" alt="TNT">
+                    خرید رنک و آیتم‌ها
+                </button>
+                <span class="btn-hero btn-user-logged" id="greetingUserMain">خوش آمدید!</span>
+                <button onclick="logoutUser()" class="btn-hero btn-logout-hero">خروج از حساب</button>
+                <a href="minecraft://" class="btn-hero btn-connect-hero">
+                    <img src="https://cdn.imgurl.ir/uploads/i78143_IMG_20260721_015750_591.png" class="mc-icon mc-icon-small" alt="TNT">
+                    ورود به سرور
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- بخش رنک‌ها -->
+    <section id="ranks" class="ranks-section">
+        <div class="rank-box week-box">
+            <div class="rank-title week-title">
+                <img src="https://cdn.imgurl.ir/uploads/h822627_IMG_20260721_015541_398.jpg" class="mc-icon mc-icon-small" alt="Grass Block">
+                ✨ رنک‌های یک هفته‌ای
+            </div>
+            <div class="rank-row"><div class="rank-name">VIP ♥️👏</div> <div class="rank-price"><span>10T</span> 1هفته</div></div>
+            <div class="rank-row"><div class="rank-name">MVP 😋</div> <div class="rank-price"><span>15T</span> 1هفته</div></div>
+            <div class="rank-row"><div class="rank-name">Knight 🗡</div> <div class="rank-price"><span>25T</span> 1هفته</div></div>
+            <div class="rank-row"><div class="rank-name">King 👏</div> <div class="rank-price"><span>30T</span> 1هفته</div></div>
+            <div class="rank-row"><div class="rank-name">Superme 🥰</div> <div class="rank-price"><span>35T</span> 1هفته</div></div>
+            <div class="rank-row"><div class="rank-name">Leon ❤️‍🔥</div> <div class="rank-price"><span>40T</span> 1هفته</div></div>
+            <div class="rank-row"><div class="rank-name">Leon-Star 🤩🤩</div> <div class="rank-price"><span>50T</span> 1هفته</div></div>
+        </div>
+
+        <div class="rank-box month-box">
+            <div class="rank-title month-title">
+                <img src="https://cdn.imgurl.ir/uploads/c71752_IMG_20260721_015753_683.png" class="mc-icon mc-icon-small" alt="Cobblestone">
+                ⭐ قیمت رنک ۱ماه
+            </div>
+            <div class="rank-row"><div class="rank-name">VIP ♥️👏</div> <div class="rank-price"><span>35T</span> 1ماه</div></div>
+            <div class="rank-row"><div class="rank-name">MVP 😋</div> <div class="rank-price"><span>50T</span> 1ماه</div></div>
+            <div class="rank-row"><div class="rank-name">Knight 🗡</div> <div class="rank-price"><span>100T</span> 1ماه</div></div>
+            <div class="rank-row"><div class="rank-name">King 👏</div> <div class="rank-price"><span>125T</span> 1ماه</div></div>
+            <div class="rank-row"><div class="rank-name">Superme 🥰</div> <div class="rank-price"><span>145T</span> 1ماه</div></div>
+            <div class="rank-row"><div class="rank-name">Leon ❤️‍🔥</div> <div class="rank-price"><span>165T</span> 1ماه</div></div>
+            <div class="rank-row"><div class="rank-name">Leon-Star 🤩🤩</div> <div class="rank-price"><span>205T</span> 1ماه</div></div>
+        </div>
+
+        <!-- بخش رنک همیشگی و دائمی پریمیوم -->
+        <div class="rank-box permanent-box">
+            <div class="rank-title permanent-title">
+                👑 رنک همیشگی و دائمی
+            </div>
+            <div class="rank-row permanent-row">
+                <div class="rank-name">پریمیوم 💎</div>
+                <div class="rank-price"><span>2,000,000T</span> همیشگی</div>
+            </div>
+        </div>
+
+        <div class="action-footer">
+            <a href="https://t.me/ah_brack" target="_blank" class="btn-big-buy">
+                <img src="https://cdn.imgurl.ir/uploads/i78143_IMG_20260721_015750_591.png" class="mc-icon" alt="TNT">
+                خرید رنک از روبیکا
+            </a>
+            <div class="contact-id">
+                <img src="https://cdn.imgurl.ir/uploads/h822627_IMG_20260721_015541_398.jpg" class="mc-icon mc-icon-small" alt="Grass">
+                @ah_brack
+                <img src="https://cdn.imgurl.ir/uploads/h822627_IMG_20260721_015541_398.jpg" class="mc-icon mc-icon-small" alt="Grass">
+            </div>
+            <button class="btn-copy" onclick="copyToClipboard('@ah_brack')">
+                📋 کپی کردن آیدی روبیکا
+            </button>
+        </div>
+    </section>
+
+    <!-- بخش امکانات، قوانین و امنیت -->
+    <section id="info" class="info-section">
+        <h2 class="info-title">
+            <img src="https://cdn.imgurl.ir/uploads/i530399_IMG_20260721_015752_880.png" class="mc-icon" alt="Diamond">
+            <span>امکانات</span> و قوانین
+            <img src="https://cdn.imgurl.ir/uploads/h822627_IMG_20260721_015541_398.jpg" class="mc-icon" alt="Grass Block">
+        </h2>
+
+        <!-- ۱. امکانات ویژه -->
+        <div class="info-box features-box">
+            <div class="info-header features-header">
+                🎮 امکانات ویژه
+            </div>
+            <div class="info-grid">
+                <div class="info-item"><i>🎨</i> <span>رنگ‌های ویژه و ماهانه</span></div>
+                <div class="info-item"><i>🎯</i> <span>مینی‌گیم‌های متنوع</span></div>
+                <div class="info-item"><i>⚔️</i> <span>سیستم کلن و گیلد</span></div>
+                <div class="info-item"><i>🎉</i> <span>ایونت‌های هفتگی</span></div>
+            </div>
+        </div>
+
+        <!-- ۲. قوانین سرور -->
+        <div class="info-box rules-box">
+            <div class="info-header rules-header">
+                ⚖️ قوانین سرور
+            </div>
+            <div class="info-grid">
+                <div class="info-item"><i>🤝</i> <span>احترام به همه بازیکنان</span></div>
+                <div class="info-item"><i>🚫</i> <span>استفاده از هک ممنوع</span></div>
+                <div class="info-item"><i>🚷</i> <span>تبلیغ سرور دیگر ممنوع</span></div>
+                <div class="info-item"><i>💬</i> <span>رعایت قوانین چت</span></div>
+            </div>
+        </div>
+
+        <!-- ۳. پشتیبانی و امنیت -->
+        <div class="info-box support-box">
+            <div class="info-header support-header">
+                🛡️ پشتیبانی و امنیت
+            </div>
+            <div class="info-grid">
+                <div class="info-item"><i>🛎️</i> <span>پشتیبانی ۲۴ ساعته</span></div>
+                <div class="info-item"><i>💬</i> <span>دیسکورد ۲۴ ساعته</span></div>
+                
+                <!-- دکمه سیستم تیکت -->
+                <button onclick="openTicketModal()" class="info-item ticket-btn">
+                    <i>🎫</i> <span>سیستم تیکت</span>
+                </button>
+
+                <div class="info-item"><i>⚡</i> <span>پاسخگویی سریع</span></div>
+                <div class="info-item"><i>📖</i> <span>راهنمای کامل</span></div>
+                <div class="info-item"><i>🤖</i> <span>امنیت و آنتی‌هک</span></div>
+                <div class="info-item"><i>🛡️</i> <span>آنتی‌هک پیشرفته</span></div>
+                <div class="info-item"><i>🔒</i> <span>آنتی‌اکسپویت</span></div>
+                <div class="info-item"><i>💾</i> <span>بکاپ خودکار روزانه</span></div>
+                <div class="info-item"><i>📍</i> <span>محافظت از لوکیشن</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- بخش سوالات متداول (FAQ) -->
+    <section id="faq" class="faq-section">
+        <h2 class="faq-title">
+            <img src="https://cdn.imgurl.ir/uploads/h822627_IMG_20260721_015541_398.jpg" class="mc-icon" alt="Grass Block">
+            <span>سوالات</span> متداول
+            <img src="https://cdn.imgurl.ir/uploads/i530399_IMG_20260721_015752_880.png" class="mc-icon" alt="Diamond">
+        </h2>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                آی‌پی سرور چیست؟
+                <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">Play.LeonCraft.ir</div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                سرور چه زمانی افتتاح می‌شود؟
+                <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">ران شده است</div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                گیم مودها چیست؟
+                <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">Survival، SkyMine و Parkour</div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                از چه نسخه‌ای پشتیبانی می‌شود؟
+                <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">از 1.8 تا 1.21.11</div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                آیا خرید رنک دائمی است؟
+                <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">
+                خیر، تنها رنک <strong style="color: #ffd700;">پریمیوم</strong> به صورت همیشگی و دائمی عرضه می‌شود.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                چگونه با پشتیبانی ارتباط بگیریم؟
+                <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">از طریق روبیکا.</div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                آیا سرور برای موبایل قابل استفاده است؟
+                <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">بله.</div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                آیا ایونت برگزار می‌شود؟
+                <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">بله.</div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                آیا جذب استاف دارید؟
+                <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">بله.</div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                آیا سرور لگ دارد؟
+                <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">هدف ما تجربه روان است.</div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                قوانین سرور کجاست؟
+                <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">به زودی نشان داده میشود</div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                انتقال رنک امکان‌پذیر است؟
+                <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">بله</div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                فروشگاه چه زمانی فعال می‌شود？
+                <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">افتتاح است</div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question" onclick="toggleFaq(this)">
+                ساخت حساب (ثبت‌نام در بازی)
+                <span class="faq-icon">▼</span>
+            </button>
+            <div class="faq-answer">
+                برای شروع بازی در سرور ماینکرافت LeonCraft، با دستور زیر ثبت‌نام کنید:
+                <div class="faq-command-box">
+                    /register <span>رمز</span> <span>رمز</span>
+                </div>
+                برای ورود مجدد:
+                <div class="faq-command-box">
+                    /login <span>رمز</span>
+                </div>
+                💡 هنگام ثبت‌نام نام‌کاربری شما ذخیره میشود و در ورود های بعدی باید با همان رمز وارد شوید.
+            </div>
+        </div>
+    </section>
+
+    <!-- مودال تیکت -->
+    <div id="ticketModal" class="modal-overlay">
+        <div class="modal-box">
+            <h2>
+                <img src="https://cdn.imgurl.ir/uploads/i78143_IMG_20260721_015750_591.png" class="mc-icon mc-icon-small" alt="TNT">
+                🎫 ارسال تیکت
+            </h2>
+            
+            <div class="ticket-message">
+                در صورت وجود هر گونه مشکلی در پرداخت می‌توانید از طریق راه‌های زیر در ارتباط باشید:
+            </div>
+            
+            <div class="ticket-contact">
+                <span>📱</span> روبیکا: @ah_brack
+            </div>
+            
+            <div class="modal-actions">
+                <button onclick="closeModal('ticketModal')" class="btn-modal-close">بستن</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- مودال ثبت‌نام -->
+    <div id="registerModal" class="modal-overlay">
+        <div class="modal-box">
+            <h2 style="color: #ffd700;">
+                <img src="https://cdn.imgurl.ir/uploads/y08770_IMG_20260721_015749_161.png" class="mc-icon mc-icon-small" alt="Crafting Table">
+                ساخت حساب کاربری
+            </h2>
+            <div class="form-group">
+                <label>نام کاربری ماینکرفت</label>
+                <input type="text" id="regUsername" placeholder="نام کاربری خود را وارد کنید">
+            </div>
+            <div class="form-group">
+                <label>ایمیل</label>
+                <input type="email" id="regEmail" placeholder="ایمیل خود را وارد کنید">
+            </div>
+            <div class="form-group">
+                <label>رمز عبور</label>
+                <input type="password" id="regPass" placeholder="رمز عبور">
+            </div>
+            <div class="form-group">
+                <label>تکرار رمز عبور</label>
+                <input type="password" id="regPassConfirm" placeholder="تکرار رمز عبور">
+            </div>
+            
+            <div class="modal-actions">
+                <button onclick="submitRegister()" class="btn-modal-submit">ثبت‌نام</button>
+                <button onclick="closeModal('registerModal')" class="btn-modal-close">انصراف</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- مودال ورود -->
+    <div id="loginModal" class="modal-overlay">
+        <div class="modal-box login-box">
+            <h2 style="color: #00d2ff;">
+                <img src="https://cdn.imgurl.ir/uploads/i530399_IMG_20260721_015752_880.png" class="mc-icon mc-icon-small" alt="Diamond">
+                ورود به حساب
+            </h2>
+            <div class="form-group">
+                <label>ایمیل</label>
+                <input type="email" id="loginEmail" placeholder="ایمیل خود را وارد کنید">
+            </div>
+            <div class="form-group">
+                <label>رمز عبور</label>
+                <input type="password" id="loginPass" placeholder="رمز عبور">
+            </div>
+            
+            <div class="modal-actions">
+                <button onclick="submitLogin()" class="btn-modal-submit">ورود</button>
+                <button onclick="closeModal('loginModal')" class="btn-modal-close">انصراف</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- فوتر -->
+    <footer>
+        <div style="display: flex; gap: 10px; align-items: center;">
+            <img src="https://cdn.imgurl.ir/uploads/i78143_IMG_20260721_015750_591.png" class="mc-icon mc-icon-small" alt="TNT">
+            <img src="https://cdn.imgurl.ir/uploads/h822627_IMG_20260721_015541_398.jpg" class="mc-icon mc-icon-small" alt="Grass">
+            <img src="https://cdn.imgurl.ir/uploads/y08770_IMG_20260721_015749_161.png" class="mc-icon mc-icon-small" alt="Crafting Table">
+        </div>
+        <p>تمامی حقوق این سایت متعلق به LeonCraft می‌باشد.</p>
+    </footer>
+
+    <!-- اسکریپت‌ها -->
+</body>
+</html>

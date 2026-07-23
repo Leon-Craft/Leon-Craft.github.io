@@ -1,0 +1,867 @@
+/* تنظیمات پایه */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background: radial-gradient(circle at center, #1a001a 0%, #000000 100%);
+    font-family: 'Vazirmatn', sans-serif;
+    color: #fff;
+    direction: rtl;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* استایل عکس‌های ماینکرفت */
+.mc-icon {
+    width: 32px;
+    height: 32px;
+    image-rendering: pixelated;
+    vertical-align: middle;
+    margin: 0 5px;
+    filter: drop-shadow(0 0 8px rgba(138, 43, 226, 0.4));
+    transition: transform 0.3s ease;
+}
+
+.mc-icon:hover {
+    transform: rotate(10deg) scale(1.1);
+}
+
+.mc-icon-small {
+    width: 24px;
+    height: 24px;
+    margin: 0 3px;
+}
+
+/* هدر */
+header {
+    background: rgba(10, 10, 15, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(140, 0, 255, 0.2);
+}
+
+.logo-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 1.4rem;
+    background: linear-gradient(90deg, #ff6bff, #8a2be2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #a49db5;
+    font-size: 0.9rem;
+    transition: 0.3s;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+nav a:hover {
+    color: #fff;
+    text-shadow: 0 0 15px rgba(138, 43, 226, 0.6);
+}
+
+nav .nav-login {
+    color: #00d2ff;
+}
+
+nav .nav-register {
+    color: #ffd700;
+}
+
+nav .nav-register:hover,
+nav .nav-login:hover {
+    color: #fff;
+}
+
+nav .nav-ticket {
+    color: #ff6bff;
+}
+
+nav .nav-ticket:hover {
+    color: #fff;
+    text-shadow: 0 0 15px rgba(255, 105, 180, 0.8);
+}
+
+/* بخش اصلی */
+.hero {
+    text-align: center;
+    padding: 50px 20px 30px;
+    position: relative;
+}
+
+.hero .logo-img {
+    max-width: 150px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    box-shadow: 0 0 50px rgba(137, 43, 226, 0.6);
+}
+
+.hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 2.8rem;
+    background: linear-gradient(135deg, #ff6bff, #8a2be2, #00d2ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.hero .server-ip {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #e0e0e0;
+    text-shadow: 0 0 20px rgba(0, 210, 255, 0.4);
+    margin: 15px 0;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.hero .server-ip span {
+    color: #00d2ff;
+}
+
+.hero p {
+    color: #a49db5;
+    font-size: 1rem;
+    margin-bottom: 25px;
+}
+
+/* دکمه‌های اصلی هیرو */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-hero {
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+    font-family: 'Vazirmatn', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+}
+
+.btn-primary-hero {
+    background: linear-gradient(90deg, #8a2be2, #4b0082);
+    box-shadow: 0 4px 20px rgba(138, 43, 226, 0.4);
+}
+
+.btn-primary-hero:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 30px rgba(138, 43, 226, 0.6);
+}
+
+.btn-connect-hero {
+    background: #00bcd4;
+    box-shadow: 0 4px 15px rgba(0, 188, 212, 0.4);
+}
+
+.btn-connect-hero:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 188, 212, 0.6);
+}
+
+.btn-register-hero {
+    background: linear-gradient(90deg, #f7971e, #ffd200);
+    color: #000;
+    font-weight: 900;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+}
+
+.btn-register-hero:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.6);
+}
+
+.btn-login-hero {
+    background: linear-gradient(90deg, #00d2ff, #4facfe);
+    color: #fff;
+    font-weight: 900;
+    box-shadow: 0 4px 15px rgba(0, 210, 255, 0.4);
+}
+
+.btn-login-hero:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 210, 255, 0.6);
+}
+
+.btn-user-logged {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 50px;
+    cursor: default;
+}
+
+.btn-logout-hero {
+    background: rgba(255, 0, 0, 0.2);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    color: #ff6b6b;
+}
+
+.btn-logout-hero:hover {
+    background: rgba(255, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+/* لیست رنک‌ها */
+.ranks-section {
+    padding: 30px 20px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.rank-box {
+    border-radius: 25px;
+    padding: 20px;
+    margin-bottom: 25px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.week-box {
+    background: rgba(128, 0, 128, 0.15);
+    border-color: rgba(186, 85, 211, 0.3);
+    box-shadow: 0 0 30px rgba(128, 0, 128, 0.1);
+}
+
+.month-box {
+    background: rgba(0, 128, 128, 0.15);
+    border-color: rgba(0, 188, 212, 0.3);
+    box-shadow: 0 0 30px rgba(0, 188, 212, 0.1);
+}
+
+/* باکس جدید برای رنک همیشگی */
+.permanent-box {
+    background: rgba(255, 215, 0, 0.1);
+    border-color: rgba(255, 215, 0, 0.4);
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.1);
+}
+
+.permanent-title {
+    color: #ffd700;
+}
+
+.permanent-row {
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    background: rgba(255, 215, 0, 0.05);
+}
+
+.permanent-row .rank-price span {
+    color: #ffd700 !important;
+    font-weight: 900;
+}
+
+.rank-title {
+    font-size: 1.3rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.week-title {
+    color: #d8b4ff;
+}
+
+.month-title {
+    color: #7fffd4;
+}
+
+.rank-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.04);
+    margin-bottom: 8px;
+    transition: 0.3s;
+    border: 1px solid transparent;
+}
+
+.rank-row:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.rank-name {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.rank-price {
+    color: #a49db5;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.rank-price span {
+    color: #ff6bff;
+}
+
+.month-box .rank-price span {
+    color: #00d2ff;
+}
+
+.action-footer {
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-big-buy {
+    display: inline-block;
+    padding: 15px 40px;
+    border-radius: 50px;
+    background: linear-gradient(90deg, #ff6bff, #8a2be2);
+    color: #fff;
+    font-weight: 800;
+    font-size: 1.2rem;
+    transition: 0.3s;
+    box-shadow: 0 4px 20px rgba(138, 43, 226, 0.5);
+    border: none;
+    cursor: pointer;
+    font-family: 'Vazirmatn', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-big-buy:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(138, 43, 226, 0.7);
+}
+
+.btn-copy {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'Vazirmatn', sans-serif;
+    font-weight: 700;
+    transition: 0.3s;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-copy:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: #ff6bff;
+}
+
+.contact-id {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ff6bff;
+    background: rgba(138, 43, 226, 0.15);
+    padding: 10px 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(138, 43, 226, 0.3);
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* بخش امکانات، قوانین و امنیت */
+.info-section {
+    padding: 30px 20px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.info-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    color: #fff;
+}
+
+.info-title span {
+    color: #8a2be2;
+}
+
+.info-box {
+    border-radius: 25px;
+    padding: 20px;
+    margin-bottom: 30px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.features-box {
+    background: rgba(128, 0, 128, 0.15);
+    border-color: rgba(186, 85, 211, 0.3);
+    box-shadow: 0 0 30px rgba(128, 0, 128, 0.1);
+}
+
+.rules-box {
+    background: rgba(255, 165, 0, 0.1);
+    border-color: rgba(255, 165, 0, 0.3);
+    box-shadow: 0 0 30px rgba(255, 165, 0, 0.05);
+}
+
+.support-box {
+    background: rgba(0, 128, 128, 0.15);
+    border-color: rgba(0, 188, 212, 0.3);
+    box-shadow: 0 0 30px rgba(0, 188, 212, 0.1);
+}
+
+.info-header {
+    font-size: 1.3rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.features-header {
+    color: #d8b4ff;
+}
+
+.rules-header {
+    color: #ffd700;
+}
+
+.support-header {
+    color: #7fffd4;
+}
+
+/* گرید برای نمایش موارد */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 12px;
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.info-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.info-item span {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #e0e0e0;
+}
+
+.info-item i {
+    font-size: 1.3rem;
+}
+
+/* دکمه تیکت در گرید */
+.ticket-btn {
+    width: 100%;
+    text-align: right;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-family: 'Vazirmatn', sans-serif;
+    font-size: 1rem;
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* بخش سوالات متداول (FAQ) */
+.faq-section {
+    padding: 40px 20px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.faq-title {
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    color: #fff;
+}
+
+.faq-title span {
+    color: #ffd700;
+}
+
+.faq-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.faq-item:hover {
+    border-color: rgba(138, 43, 226, 0.3);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 15px 20px;
+    background: transparent;
+    border: none;
+    color: #e0e0e0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-family: 'Vazirmatn', sans-serif;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.faq-question:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.faq-icon {
+    transition: transform 0.3s ease;
+    font-size: 1.2rem;
+    color: #8a2be2;
+}
+
+.faq-item.open .faq-icon {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    padding: 0 20px;
+    color: #a49db5;
+    line-height: 1.6;
+    border-top: 0px solid rgba(255, 255, 255, 0.05);
+}
+
+.faq-item.open .faq-answer {
+    max-height: 300px;
+    padding: 15px 20px 20px;
+    border-top-width: 1px;
+}
+
+.faq-command-box {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 15px;
+    margin-top: 10px;
+    direction: ltr;
+    text-align: left;
+    font-family: monospace;
+    color: #00d2ff;
+    font-size: 0.95rem;
+}
+
+.faq-command-box span {
+    color: #ffd700;
+}
+
+/* مودال‌ها */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.modal-overlay.open {
+    display: flex;
+}
+
+.modal-box {
+    background: rgba(20, 10, 30, 0.9);
+    border-radius: 25px;
+    padding: 30px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 0 60px rgba(255, 215, 0, 0.2);
+}
+
+.modal-box h2 {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: right;
+}
+
+.form-group label {
+    color: #a49db5;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.modal-box input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    font-family: 'Vazirmatn', sans-serif;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+.modal-box input:focus {
+    border-color: #ffd700;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+}
+
+.modal-box input::placeholder {
+    color: #a49db5;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.btn-modal-submit {
+    padding: 10px 30px;
+    background: linear-gradient(90deg, #f7971e, #ffd200);
+    color: #000;
+    font-weight: 800;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Vazirmatn', sans-serif;
+    font-size: 1rem;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-modal-submit:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+.btn-modal-close {
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Vazirmatn', sans-serif;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.btn-modal-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.modal-box.login-box {
+    border-color: rgba(0, 210, 255, 0.5);
+    box-shadow: 0 0 60px rgba(0, 210, 255, 0.2);
+}
+
+.modal-box.login-box h2 {
+    color: #00d2ff;
+}
+
+.modal-box.login-box .btn-modal-submit {
+    background: linear-gradient(90deg, #00d2ff, #4facfe);
+    color: #fff;
+}
+
+/* استایل اختصاصی مودال تیکت */
+#ticketModal .modal-box {
+    border: 1px solid rgba(255, 105, 180, 0.5);
+    box-shadow: 0 0 60px rgba(255, 105, 180, 0.2);
+}
+
+#ticketModal h2 {
+    color: #ff6bff;
+}
+
+.ticket-message {
+    text-align: center;
+    color: #a49db5;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.ticket-contact {
+    background: rgba(138, 43, 226, 0.15);
+    border: 1px solid rgba(138, 43, 226, 0.3);
+    padding: 10px 15px;
+    border-radius: 15px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #ff6bff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+footer p {
+    color: #54506d;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 500px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero .server-ip {
+        font-size: 1.2rem;
+        flex-wrap: wrap;
+    }
+
+    .action-footer {
+        width: 100%;
+    }
+
+    .btn-big-buy,
+    .btn-copy,
+    .contact-id,
+    .btn-hero {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .faq-command-box {
+        font-size: 0.85rem;
+        word-break: break-all;
+    }
+}
